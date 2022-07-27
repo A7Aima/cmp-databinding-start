@@ -1,4 +1,6 @@
 <div class="container">
+  <!-- (serverCreated) and (blueprintCreated) are defined as event emitter from other component
+     that here act as a event trigger functions and sends the events to the function written here -->
   <app-cockpit (serverCreated)="onServerAdded($event)" (blueprintCreated)="onBlueprintAdded($event)"></app-cockpit>
   <hr>
   <div class="row">
