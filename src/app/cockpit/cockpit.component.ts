@@ -15,6 +15,8 @@ export class CockpitComponent {
   @ViewChild("newServerContentData", { static: true }) serverContentInput: ElementRef;
 
   onAddServer(inputName: HTMLInputElement) {
+    // the emit function will emit the output whatever we are passing to
+    // the place where it is getting called
     this.serverCreated.emit({
       serverName: inputName.value,
       serverContent: this.serverContentInput.nativeElement.value,
